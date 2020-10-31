@@ -1,0 +1,10 @@
+t=0:0.1:20*pi;
+x=sin(t);
+y=cos(t);
+z=t.*sin(t).*cos(t);
+plot3(x,y,z);
+xlabel("x");
+ylabel("y");
+zlabel("z");
+title("Line in 3D space");
+grid on;

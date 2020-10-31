@@ -1,0 +1,11 @@
+num=0;
+A=input('ÇëÊäÈë¾ØÕó');
+for col=A
+    for it=col
+        if(col==0)
+            num=num+1;
+        end
+    end
+end
+idsp
+

@@ -1,0 +1,4 @@
+% (1)
+syms a x;
+f=(sin(x)-sin(a))/(x-a);
+limit(f,x,a)
