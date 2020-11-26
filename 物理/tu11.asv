@@ -1,0 +1,11 @@
+%%
+UH=[0 4.9 9.8 14.8 19.6 24.6 29.5 34.5 39.3];
+KH=20;
+Is=0:1:8;
+
+B=UH./(KH.*Is)
+figure(1)
+fit=polyfit(Is,UH,1);
+x=0:1:9
+y=plotval(fit,x);
+plot(x,y);

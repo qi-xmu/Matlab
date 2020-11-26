@@ -1,0 +1,14 @@
+UH=[0 4.1 8.2 12.3 16.4 20.5 24.6 28.5 32.5];
+Im=0:0.1:0.8;
+KH=20;
+Is=5;
+
+B=UH./(KH.*Is);
+fit=polyfit(Im,B,1)
+
+Bfit=polyval(fit,Im);
+plot(Im,Bfit,Im,B,"r.");
+xlabel("Im/A");
+ylabel("B/T");
+title("B-Im励磁特性曲线");
+legend("y=0.4070x+0.0006","测试点")
