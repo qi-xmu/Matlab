@@ -3,7 +3,7 @@
 % m：傅里叶级数展开的项数
 clc;clear all;close all;
 
-display('Please input the value of m (傅里叶级数展开的项数)'); % 在命令窗口显示提示信息
+disp('Please input the value of m (傅里叶级数展开的项数)'); % 在命令窗口显示提示信息
 m = input('m = ');                                             % 键盘输入傅里叶级数展开的项数
 t = -2*pi:0.01:2*pi;                                            % 时域波形的时间范围-2π~2π，采样间隔0.01
 n = round(length(t)/4);                                        % 根据周期方波信号的周期，计算1/2周期的数据点数

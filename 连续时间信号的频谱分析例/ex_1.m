@@ -1,13 +1,16 @@
 %ex_1
 %ÇóÏµÊý
 clear all; syms t x n t0;
-T=5;tao_2=0.5;Nf=7;Nn=6;
-x=sym('Heaviside(t+t0)-Heaviside(t-t0)')
-x=subs(x,t0,tao_2)
-A0=int(x,t,-tao_2,T-tao_2)/T
-As=int(x*2*cos(2*pi*n*t/T)/T,t,-tao_2,T-tao_2)
-Bs=int(x*2*sin(2*pi*n*t/T)/T,t,-tao_2,T-tao_2)
-Fn=(As-j*Bs)/2
+T=5;
+tao_2=0.5;
+Nf=7;
+Nn=6;
+x=str2sym('Heaviside(t+t0)-Heaviside(t-t0)');
+x=subs(x,t0,tao_2);
+A0=int(x,t,-tao_2,T-tao_2)/T;
+As=int(x*2*cos(2*pi*n*t/T)/T,t,-tao_2,T-tao_2);
+Bs=int(x*2*sin(2*pi*n*t/T)/T,t,-tao_2,T-tao_2);
+Fn=(As-1i*Bs)/2;
 A(1)=double(vpa(A0,Nn));
 for k=1:Nf
      A(k+1)=double(vpa(subs(As,n,k),Nn));
